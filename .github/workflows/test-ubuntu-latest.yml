@@ -1,4 +1,4 @@
-name: Build
+name: Test ubuntu-latest
 
 on:
   pull_request:
@@ -12,10 +12,16 @@ on:
 
 jobs:
   build:
-    name: "Build"
+    name: "Test ubuntu-latest"
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
     steps:
+      - name: "Ubuntu release"
+        run: lsb_release -a
+
+      - name: "Ubuntu version"
+        run: cat /etc/os-release
+
       - name: "Update apt"
         run: sudo apt update
