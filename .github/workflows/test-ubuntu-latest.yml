@@ -1,4 +1,4 @@
-name: Build
+name: Test ubuntu-latest
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: "Build"
+    name: "Test ubuntu-latest"
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
