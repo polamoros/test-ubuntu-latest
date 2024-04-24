@@ -17,8 +17,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Display ubuntu version"
+      - name: "Ubuntu release"
         run: lsb_release -a
+
+      - name: "Ubuntu version"
+        run: cat /etc/os-release
 
       - name: "Update apt"
         run: sudo apt update
