@@ -1,0 +1,21 @@
+name: Build
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    name: "Build"
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Update apt"
+        run: sudo apt update
